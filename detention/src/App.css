@@ -1,0 +1,13 @@
+ body{
+   background-color: gray;
+ }
+
+ ol {
+  columns: 2;
+  color: aliceblue;
+  background-color: green;
+  border-style: solid;
+  border-width: 20px;
+  border-radius: 3px;
+  border-color: goldenrod;
+ }
