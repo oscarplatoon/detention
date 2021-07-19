@@ -1,21 +1,45 @@
-// import logo from './logo.svg';
 import './App.css';
-import Message from "./Message.js"
+import { Component } from 'react';
+import ChalkBoardText from './components/ChalkBoardText';
 
-function App() {
-  const writeMessages = () => {
-    let messages = [];
-    for (let i=0; i <= 100; i++) {
-      messages.push(<Message text="I will never mutate state or props directly"/>);
+// functional
+// function App() {
+//   const makeBoard = () => {
+//     let board = []
+//     for(let i = 0; i <= 100; i++){
+//       board.push(<ChalkBoardText key={i}/>)
+//     }
+//     return board
+//   }
+//   return (
+//     <div className="App">
+//       {
+//         makeBoard()
+//       }
+//     </div>
+//   )
+// }
+
+// class
+class App extends Component {
+
+  makeBoard = (num) => {
+    let board = []
+    for(let i = 0; i <= 100; i++){
+      board.push(<ChalkBoardText key={i}/>)
     }
-    return messages;
+    return board
   }
 
-  return (
-    <div>
-      <h1>{writeMessages()}</h1>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+      {
+        this.makeBoard(15)
+      }
+      </div>
+    )
+  }
 }
 
 export default App
