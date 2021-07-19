@@ -10,10 +10,11 @@ function App() {
     return messages;
   }
 
-
   return (
     <div>
-      <h1>{numMessages()}</h1>
+      <ol>
+      {numMessages()}
+      </ol>
     </div>
   );
 }
